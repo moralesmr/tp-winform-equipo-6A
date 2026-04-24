@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace tp_winform_equipo_6A
 {
-    public partial class Form1 : Form
+    public partial class frmAdmMarcas : Form
     {
-        public Form1()
+        public frmAdmMarcas()
         {
             InitializeComponent();
         }

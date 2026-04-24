@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tp_winform_equipo_6A
+namespace dominio
 {
     class Articulo
     {

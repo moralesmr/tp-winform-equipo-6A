@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tp_winform_equipo_6A
+namespace dominio
 {
-    class Marca
+    internal class Imagen
     {
         public int Id { get; set; }
-        public string Descripcion { get; set; }
+        public int IdArticulo { get; set; }
+        public string ImagenUrl { get; set; }
     }
-
 }

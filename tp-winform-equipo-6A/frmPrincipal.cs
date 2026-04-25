@@ -24,5 +24,16 @@ namespace tp_winform_equipo_6A
             ArticuloNegocio articuloNegocio = new negocio.ArticuloNegocio();
             dgvArticulos.DataSource = articuloNegocio.listarArticulos();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            frmAgregarArticulos ventanaAgregarArticulo = new frmAgregarArticulos();
+            ventanaAgregarArticulo.ShowDialog();
+        }
     }
 }

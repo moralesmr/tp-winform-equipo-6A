@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using negocio;
 
 namespace tp_winform_equipo_6A
 {
@@ -17,34 +18,11 @@ namespace tp_winform_equipo_6A
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            //Conexion BBDD
+            ArticuloNegocio articuloNegocio = new negocio.ArticuloNegocio();
+            dgvArticulos.DataSource = articuloNegocio.listarArticulos();
         }
     }
 }

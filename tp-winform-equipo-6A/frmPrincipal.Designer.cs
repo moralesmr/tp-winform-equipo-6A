@@ -34,160 +34,132 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCategoria = new System.Windows.Forms.Button();
             this.btnMarcas = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnVerDetalle = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // comboFiltro
             // 
             this.comboFiltro.FormattingEnabled = true;
-            this.comboFiltro.Location = new System.Drawing.Point(165, 29);
+            this.comboFiltro.Location = new System.Drawing.Point(220, 36);
+            this.comboFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.comboFiltro.Name = "comboFiltro";
-            this.comboFiltro.Size = new System.Drawing.Size(121, 21);
+            this.comboFiltro.Size = new System.Drawing.Size(160, 24);
             this.comboFiltro.TabIndex = 0;
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(27, 30);
+            this.txtBuscar.Location = new System.Drawing.Point(36, 37);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(132, 22);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.Text = "Buscar por:";
-            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtIngresarTexto
             // 
-            this.txtIngresarTexto.Location = new System.Drawing.Point(366, 29);
+            this.txtIngresarTexto.Location = new System.Drawing.Point(488, 36);
+            this.txtIngresarTexto.Margin = new System.Windows.Forms.Padding(4);
             this.txtIngresarTexto.Name = "txtIngresarTexto";
-            this.txtIngresarTexto.Size = new System.Drawing.Size(100, 20);
+            this.txtIngresarTexto.Size = new System.Drawing.Size(132, 22);
             this.txtIngresarTexto.TabIndex = 2;
             this.txtIngresarTexto.Text = "Ingrese texto...";
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnBuscar.Location = new System.Drawing.Point(542, 29);
+            this.btnBuscar.Location = new System.Drawing.Point(723, 36);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // btnCategoria
             // 
-            this.btnCategoria.Location = new System.Drawing.Point(581, 413);
+            this.btnCategoria.Location = new System.Drawing.Point(775, 508);
+            this.btnCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(75, 23);
+            this.btnCategoria.Size = new System.Drawing.Size(100, 28);
             this.btnCategoria.TabIndex = 8;
             this.btnCategoria.Text = "Categorías";
             this.btnCategoria.UseVisualStyleBackColor = true;
-            this.btnCategoria.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnMarcas
             // 
-            this.btnMarcas.Location = new System.Drawing.Point(489, 413);
+            this.btnMarcas.Location = new System.Drawing.Point(652, 508);
+            this.btnMarcas.Margin = new System.Windows.Forms.Padding(4);
             this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(75, 23);
+            this.btnMarcas.Size = new System.Drawing.Size(100, 28);
             this.btnMarcas.TabIndex = 9;
             this.btnMarcas.Text = "Marcas";
             this.btnMarcas.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCodigo,
-            this.colNombre,
-            this.colMarca,
-            this.colCategoria,
-            this.colPrecio});
-            this.dataGridView1.Location = new System.Drawing.Point(78, 126);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(539, 224);
-            this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "Código";
-            this.colCodigo.Name = "colCodigo";
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            // 
-            // colMarca
-            // 
-            this.colMarca.HeaderText = "Marca";
-            this.colMarca.Name = "colMarca";
-            // 
-            // colCategoria
-            // 
-            this.colCategoria.HeaderText = "Categoría";
-            this.colCategoria.Name = "colCategoria";
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.Name = "colPrecio";
-            // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(41, 413);
+            this.btnAgregar.Location = new System.Drawing.Point(55, 508);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 28);
             this.btnAgregar.TabIndex = 11;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(131, 413);
+            this.btnModificar.Location = new System.Drawing.Point(175, 508);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(100, 28);
             this.btnModificar.TabIndex = 12;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(227, 413);
+            this.btnEliminar.Location = new System.Drawing.Point(303, 508);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.Location = new System.Drawing.Point(328, 413);
+            this.btnVerDetalle.Location = new System.Drawing.Point(437, 508);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(75, 23);
+            this.btnVerDetalle.Size = new System.Drawing.Size(100, 28);
             this.btnVerDetalle.TabIndex = 14;
             this.btnVerDetalle.Text = "Ver Detalle";
             this.btnVerDetalle.UseVisualStyleBackColor = true;
-            this.btnVerDetalle.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dgvArticulos
+            // 
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(36, 154);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersWidth = 51;
+            this.dgvArticulos.RowTemplate.Height = 24;
+            this.dgvArticulos.Size = new System.Drawing.Size(839, 245);
+            this.dgvArticulos.TabIndex = 15;
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnVerDetalle);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnMarcas);
             this.Controls.Add(this.btnCategoria);
             this.Controls.Add(this.btnBuscar);
@@ -195,10 +167,11 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.comboFiltro);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.Text = "Catálogo de Artículos";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,16 +185,11 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCategoria;
         private System.Windows.Forms.Button btnMarcas;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnVerDetalle;
+        private System.Windows.Forms.DataGridView dgvArticulos;
     }
 }
 

@@ -76,18 +76,18 @@ namespace negocio
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Id = (int)datos.Lector["id"];
+                    aux.Id = (int)datos.Lector["id"]; //cambiar por idArticulo
                     aux.CodArticulo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
 
 
                     aux.Marca = new Marca();
-                    aux.Marca.Id = (int)datos.Lector["id"];
+                    aux.Marca.Id = (int)datos.Lector["id"]; //cambiar por idMarca
                     aux.Marca.Descripcion = (string)datos.Lector["Marca"].ToString();
 
                     aux.Categoria = new Categoria();
-                    aux.Categoria.Id = (int)datos.Lector["id"];
+                    aux.Categoria.Id = (int)datos.Lector["id"]; //cambiar por idCategoria
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"].ToString();
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     //if(!(lector["UrlImagen"] is DBNull ))

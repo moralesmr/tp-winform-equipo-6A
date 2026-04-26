@@ -54,6 +54,28 @@ namespace tp_winform_equipo_6A
             modificar.ShowDialog();
             cargarArticulos();
         }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            Articulo articuloSeleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Desea eliminar el articulo?", "Eliminando", MessageBoxButtons.YesNo);
+                if (respuesta == DialogResult.Yes)
+                {
+                    articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    articuloNegocio.eliminar(articuloSeleccionado.Id);
+                    cargarArticulos();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
     
 }

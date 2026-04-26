@@ -42,7 +42,21 @@ namespace tp_winform_equipo_6A
                 MessageBox.Show("error en la carga: " + ex.Message);
             }
         }
-    
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {

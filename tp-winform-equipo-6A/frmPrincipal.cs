@@ -76,6 +76,75 @@ namespace tp_winform_equipo_6A
                 throw ex;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void btnBuscador_Click(object sender, EventArgs e)
+        {
+            if (cbBuscador.SelectedItem == null)
+            {
+                MessageBox.Show("seleccione un campo");
+                return;
+            }
+
+            string campo = cbBuscador.SelectedItem.ToString();
+            string filtro = tbBuscador.Text;
+
+            ArticuloNegocio negocio = new ArticuloNegocio();
+        
+            try
+            {
+                dgvArticulos.DataSource = negocio.filtrar(campo, filtro);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+
+        
     }
     
 }

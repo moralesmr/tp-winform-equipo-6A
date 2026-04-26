@@ -14,9 +14,17 @@ namespace tp_winform_equipo_6A
 {
     public partial class frmAgregarArticulos : Form
     {
+        Articulo articulo = null;
         public frmAgregarArticulos()
         {
             InitializeComponent();
+        }
+
+        public frmAgregarArticulos(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -26,19 +34,31 @@ namespace tp_winform_equipo_6A
 
         private void btnGuardarArticulo_Click(object sender, EventArgs e)
         {
-            Articulo aux = new Articulo();
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
-                aux.CodArticulo = tbCodigo.Text;
-                aux.Nombre = tbNombre.Text;
-                aux.Descripcion = tbDescripcion.Text;
-                aux.Precio = decimal.Parse(tbPrecio.Text);
-                aux.Categoria = (Categoria)cbCategoria.SelectedItem;
-                aux.Marca = (Marca)cbMarca.SelectedItem;
+                if (articulo == null)
+                    articulo = new Articulo();
 
-                articuloNegocio.agregar(aux);
-                MessageBox.Show("Articulo agregado correctamente");
+                articulo.CodArticulo = tbCodigo.Text;
+                articulo.Nombre = tbNombre.Text;
+                articulo.Descripcion = tbDescripcion.Text;
+                articulo.Precio = decimal.Parse(tbPrecio.Text);
+                articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
+                articulo.Marca = (Marca)cbMarca.SelectedItem;
+                //aux.UrlImagen = tbUrlImagen.Text; 
+
+                if (articulo.Id != 0)
+                {
+                    articuloNegocio.modificar(articulo);
+                    MessageBox.Show("Articulo modificado correctamente");
+                }
+                else
+                {
+                    articuloNegocio.agregar(articulo);
+                    MessageBox.Show("Articulo agregado correctamente");
+                }
+
                 Close();
 
             }
@@ -51,11 +71,27 @@ namespace tp_winform_equipo_6A
         private void frmAgregarArticulos_Load(object sender, EventArgs e)
         {
             //Autocompletar cbMarca y cbCategoria
-            MarcaNegocio marcaNegocio = new MarcaNegocio();
+             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
             cbMarca.DataSource = marcaNegocio.Listar();
+            cbMarca.ValueMember = "Id";
+            cbMarca.DisplayMember = "Descripcion";
             cbCategoria.DataSource = categoriaNegocio.listar();
+            cbCategoria.ValueMember = "Id";
+            cbCategoria.DisplayMember = "Descripcion";
+
+            if (articulo != null)
+            {
+                tbCodigo.Text = articulo.CodArticulo;
+                tbNombre.Text = articulo.Nombre;
+                tbDescripcion.Text = articulo.Descripcion;
+                tbPrecio.Text = articulo.Precio.ToString();
+                cbCategoria.SelectedValue = articulo.Categoria.Id;
+                cbMarca.SelectedValue = articulo.Marca.Id;
+                // tbtUrlImagen.Text = articulo.UrlImagen;
+                //cargarImagen(articulo.UrlImagen);
+            }
         }
 
         private void btnCancelarArticulo_Click(object sender, EventArgs e)

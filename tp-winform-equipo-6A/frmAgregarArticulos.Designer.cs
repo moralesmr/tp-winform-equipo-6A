@@ -30,7 +30,7 @@
         {
             this.btnCancelarArticulo = new System.Windows.Forms.Button();
             this.btnGuardarArticulo = new System.Windows.Forms.Button();
-            this.tbIUrl = new System.Windows.Forms.TextBox();
+            this.tbUrl = new System.Windows.Forms.TextBox();
             this.tbPrecio = new System.Windows.Forms.TextBox();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.tbNombre = new System.Windows.Forms.TextBox();
@@ -66,13 +66,13 @@
             this.btnGuardarArticulo.UseVisualStyleBackColor = true;
             this.btnGuardarArticulo.Click += new System.EventHandler(this.btnGuardarArticulo_Click);
             // 
-            // tbIUrl
+            // tbUrl
             // 
-            this.tbIUrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbIUrl.Location = new System.Drawing.Point(188, 288);
-            this.tbIUrl.Name = "tbIUrl";
-            this.tbIUrl.Size = new System.Drawing.Size(255, 22);
-            this.tbIUrl.TabIndex = 29;
+            this.tbUrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbUrl.Location = new System.Drawing.Point(188, 288);
+            this.tbUrl.Name = "tbUrl";
+            this.tbUrl.Size = new System.Drawing.Size(255, 22);
+            this.tbUrl.TabIndex = 29;
             // 
             // tbPrecio
             // 
@@ -190,7 +190,7 @@
             this.ClientSize = new System.Drawing.Size(528, 554);
             this.Controls.Add(this.btnCancelarArticulo);
             this.Controls.Add(this.btnGuardarArticulo);
-            this.Controls.Add(this.tbIUrl);
+            this.Controls.Add(this.tbUrl);
             this.Controls.Add(this.tbPrecio);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.tbNombre);
@@ -217,7 +217,7 @@
 
         private System.Windows.Forms.Button btnCancelarArticulo;
         private System.Windows.Forms.Button btnGuardarArticulo;
-        private System.Windows.Forms.TextBox tbIUrl;
+        private System.Windows.Forms.TextBox tbUrl;
         private System.Windows.Forms.TextBox tbPrecio;
         private System.Windows.Forms.TextBox tbDescripcion;
         private System.Windows.Forms.TextBox tbNombre;

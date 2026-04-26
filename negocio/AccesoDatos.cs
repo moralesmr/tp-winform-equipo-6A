@@ -60,6 +60,11 @@ namespace negocio
             }
         }
 
+        public void setearConsulta(string consulta)
+        {
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = consulta;
+        }
         public void setearParametros(string nombre, object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);

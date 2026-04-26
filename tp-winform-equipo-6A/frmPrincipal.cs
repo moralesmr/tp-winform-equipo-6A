@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using negocio;
 
 namespace tp_winform_equipo_6A
 {
@@ -20,9 +21,7 @@ namespace tp_winform_equipo_6A
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            //Conexion BBDD
-            ArticuloNegocio articuloNegocio = new negocio.ArticuloNegocio();
-            dgvArticulos.DataSource = articuloNegocio.listarArticulos();
+            cargarArticulos();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -34,6 +33,27 @@ namespace tp_winform_equipo_6A
         {
             frmAgregarArticulos ventanaAgregarArticulo = new frmAgregarArticulos();
             ventanaAgregarArticulo.ShowDialog();
+            cargarArticulos();
+
+        }
+
+        public void cargarArticulos()
+        {
+            //Conexion BBDD
+            ArticuloNegocio articuloNegocio = new negocio.ArticuloNegocio();
+            dgvArticulos.DataSource = articuloNegocio.listarArticulos();
+            dgvArticulos.Columns["Id"].Visible = false;
+        }
+
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            Articulo articuloSeleccionado;
+            articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            frmAgregarArticulos modificar = new frmAgregarArticulos(articuloSeleccionado);
+            modificar.ShowDialog();
+            cargarArticulos();
         }
     }
+    
 }

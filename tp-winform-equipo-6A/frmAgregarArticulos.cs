@@ -51,11 +51,11 @@ namespace tp_winform_equipo_6A
         private void frmAgregarArticulos_Load(object sender, EventArgs e)
         {
             //Autocompletar cbMarca y cbCategoria
-            //MarcaNegocio marcaNegocio = new MarcaNegocio();
-            //CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
-            //cbMarca.DataSource = marcaNegocio.listar();
-            //cbCategoria.DataSource = categoriaNegocio.listar();
+            cbMarca.DataSource = marcaNegocio.Listar();
+            cbCategoria.DataSource = categoriaNegocio.listar();
         }
 
         private void btnCancelarArticulo_Click(object sender, EventArgs e)

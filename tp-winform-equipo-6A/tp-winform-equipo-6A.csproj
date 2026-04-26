@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmCategorias.Designer.cs">
+      <DependentUpon>frmAdmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdmMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,18 @@
     <Compile Include="frmAgregarArticulos.Designer.cs">
       <DependentUpon>frmAgregarArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetalleArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleArticulos.Designer.cs">
+      <DependentUpon>frmDetalleArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarArticulos.Designer.cs">
+      <DependentUpon>frmModificarArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +84,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdmCategorias.resx">
+      <DependentUpon>frmAdmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdmMarcas.resx">
       <DependentUpon>frmAdmMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarArticulos.resx">
       <DependentUpon>frmAgregarArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetalleArticulos.resx">
+      <DependentUpon>frmDetalleArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarArticulos.resx">
+      <DependentUpon>frmModificarArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

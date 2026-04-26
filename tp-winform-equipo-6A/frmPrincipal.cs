@@ -141,10 +141,6 @@ namespace tp_winform_equipo_6A
             }
         }
 
-
-
-
-        
     }
     
 }

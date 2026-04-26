@@ -125,6 +125,114 @@ namespace negocio
             }
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public List<Articulo> filtrar(string campo, string filtro)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                string consulta = @"SELECT A.Codigo, A.Nombre, A.Descripcion, 
+                                    M.Descripcion AS Marca, 
+                                    C.Descripcion AS Categoria, 
+                                    A.Precio
+                                    FROM ARTICULOS A
+                                    INNER JOIN MARCAS M ON A.idMarca = M.id
+                                    INNER JOIN CATEGORIAS C ON A.idCategoria = C.id
+                                    WHERE ";
+
+                switch (campo)
+                {
+                    case "Nombre":
+                        consulta += "A.Nombre LIKE '%" + filtro + "%'";
+                        break;
+        
+                    case "Marca":
+                        consulta += "M.Descripcion LIKE '%" + filtro + "%'";
+                        break;
+        
+                    case "Categoria":
+                        consulta += "C.Descripcion LIKE '%" + filtro + "%'";
+                        break;
+        
+                    case "Codigo":
+                        consulta += "A.Codigo LIKE '%" + filtro + "%'";
+                        break;
+        
+                    case "Precio":
+                        decimal precio;
+        
+                        if (decimal.TryParse(filtro, out precio))
+                        {
+                            consulta += "A.Precio = " + precio;
+                        }
+                        else
+                        {
+                            throw new Exception("El valor ingresado para Precio no es válido.");
+                        }
+        
+                        break;
+                }
+
+                datos.setConsulta(consulta);
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+        
+                    aux.CodArticulo = datos.Lector["Codigo"].ToString();
+                    aux.Nombre = datos.Lector["Nombre"].ToString();
+                    aux.Descripcion = datos.Lector["Descripcion"].ToString();
+        
+                    aux.Marca = new Marca();
+                    aux.Marca.Descripcion = datos.Lector["Marca"].ToString();
+        
+                    aux.Categoria = new Categoria();
+                    aux.Categoria.Descripcion = datos.Lector["Categoria"].ToString();
+        
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+        
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+}
     }
 }
 

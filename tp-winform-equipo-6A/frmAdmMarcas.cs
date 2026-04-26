@@ -16,5 +16,10 @@ namespace tp_winform_equipo_6A
         {
             InitializeComponent();
         }
+
+        private void frmAdmMarcas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

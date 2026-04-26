@@ -90,7 +90,8 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Name = "frmAdmMarcas";
-            this.Text = "Administrar Categorías";
+            this.Text = "Administrar Marcas";
+            this.Load += new System.EventHandler(this.frmAdmMarcas_Load);
             this.ResumeLayout(false);
 
         }

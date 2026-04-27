@@ -70,8 +70,9 @@ namespace tp_winform_equipo_6A
 
         private void frmAgregarArticulos_Load(object sender, EventArgs e)
         {
+            Estilos.BotonAzul(btnGuardarArticulo);
             //Autocompletar cbMarca y cbCategoria
-             MarcaNegocio marcaNegocio = new MarcaNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
             cbMarca.DataSource = marcaNegocio.Listar();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
- 
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -42,8 +41,7 @@
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,34 +156,23 @@
             this.pictureBox1.Size = new System.Drawing.Size(246, 323);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-           
             // 
-            // btnGuardar
+            // btnVolver
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(420, 404);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(142, 38);
-            this.btnGuardar.TabIndex = 13;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(585, 404);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(142, 38);
-            this.btnCancelar.TabIndex = 14;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnVolver.Location = new System.Drawing.Point(585, 404);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(142, 38);
+            this.btnVolver.TabIndex = 14;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmDetalleArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtCategoria);
@@ -201,10 +188,10 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmDetalleArticulos";
             this.Text = "frmDetalleArticulos";
+            this.Load += new System.EventHandler(this.frmDetalleArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
- 
 
         }
 
@@ -223,8 +210,7 @@
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnVolver;
  
     }
 }

@@ -55,7 +55,35 @@ namespace tp_winform_equipo_6A
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+            MarcaNegocio negocio = new MarcaNegocio();
+            Marca seleccionada;
+
+            try
+            {
+
+                if (listBoxMarca.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una marca de la lista para eliminar.");
+                    return;
+                }
+
+                DialogResult respuesta = MessageBox.Show("¿De verdad desea eliminar esta marca?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionada = (Marca)listBoxMarca.SelectedItem;
+
+
+                    negocio.Eliminar(seleccionada.Id);
+
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo eliminar la marca. Es posible que esté vinculada a un artículo existente. \nDetalle: " + ex.Message, "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

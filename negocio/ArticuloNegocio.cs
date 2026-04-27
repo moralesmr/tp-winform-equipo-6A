@@ -115,9 +115,10 @@ namespace negocio
 
         public void eliminar(int id)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
+                
                 datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @id");
                 datos.setearParametros("@id", id);
                 datos.ejecutarAccion();
@@ -125,6 +126,10 @@ namespace negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
 
         }

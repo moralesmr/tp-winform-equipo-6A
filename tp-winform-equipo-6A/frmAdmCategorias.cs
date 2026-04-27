@@ -14,6 +14,8 @@ namespace tp_winform_equipo_6A
 {
     public partial class frmAdmCategorias : Form
     {
+
+        private List<Categoria> listaCategorias;
         public frmAdmCategorias()
         {
             InitializeComponent();

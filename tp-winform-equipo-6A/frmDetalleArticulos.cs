@@ -14,7 +14,7 @@ namespace tp_winform_equipo_6A
 {
     public partial class frmDetalleArticulos : Form
     {
-
+        private int indiceImagen = 0;
         private Articulo articulo;
 
         public frmDetalleArticulos(Articulo articuloSeleccionado)
@@ -34,12 +34,11 @@ namespace tp_winform_equipo_6A
             txtMarca.Text = articulo.Marca.Descripcion;
             txtPrecio.Text = articulo.Precio.ToString();    
             txtDescripcion.Text = articulo.Descripcion;
-            if (articulo.Imagenes != null && articulo.Imagenes.Count > 0)
-            {
-                pictureBox1.Load(articulo.Imagenes[0].ImagenUrl);
-                MessageBox.Show("Imagen cargada correctamente");
-            }
-            
+
+            indiceImagen = 0;
+            cargarImagen();
+
+
         }
 
 
@@ -58,6 +57,39 @@ namespace tp_winform_equipo_6A
         private void frmDetalleArticulos_Load(object sender, EventArgs e)
         {
             Estilos.BotonAzul(btnVolver);
+        }
+
+        private void cargarImagen()
+        {
+            if (articulo.Imagenes != null && articulo.Imagenes.Count > 0)
+            {
+                try
+                {
+                    pbImagen.Load(articulo.Imagenes[indiceImagen].ImagenUrl);
+                }
+                catch
+                {
+                    pbImagen.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcCBHgbS23kyBw2r8Pquu19UtKZnrZmFUx1g&s");
+                }
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (articulo.Imagenes != null && indiceImagen > 0)
+            {
+                indiceImagen--;
+                cargarImagen();
+            }
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            if (articulo.Imagenes != null && indiceImagen < articulo.Imagenes.Count - 1)
+            {
+                indiceImagen++;
+                cargarImagen();
+            }
         }
     }
 }

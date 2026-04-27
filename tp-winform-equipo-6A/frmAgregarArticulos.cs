@@ -35,6 +35,8 @@ namespace tp_winform_equipo_6A
         private void btnGuardarArticulo_Click(object sender, EventArgs e)
         {
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            int idArticulo;
             try
             {
                 if (articulo == null)
@@ -46,17 +48,33 @@ namespace tp_winform_equipo_6A
                 articulo.Precio = decimal.Parse(tbPrecio.Text);
                 articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
                 articulo.Marca = (Marca)cbMarca.SelectedItem;
-                //aux.UrlImagen = tbUrlImagen.Text; 
+
+
+                if (!string.IsNullOrWhiteSpace(tbUrl.Text))
+                {
+                    articulo.Imagenes.Add(new Imagen
+                    {
+                        ImagenUrl = tbUrl.Text
+                    });
+                }
 
                 if (articulo.Id != 0)
                 {
                     articuloNegocio.modificar(articulo);
+                    idArticulo = articulo.Id;
                     MessageBox.Show("Articulo modificado correctamente");
                 }
                 else
                 {
-                    articuloNegocio.agregar(articulo);
+                    idArticulo = articuloNegocio.agregar(articulo);
+                    articulo.Id = idArticulo;
                     MessageBox.Show("Articulo agregado correctamente");
+                }
+
+                foreach (var img in articulo.Imagenes)
+                {
+                    img.IdArticulo = idArticulo;
+                    imagenNegocio.agregarImagen(img);
                 }
 
                 Close();
@@ -90,8 +108,11 @@ namespace tp_winform_equipo_6A
                 tbPrecio.Text = articulo.Precio.ToString();
                 cbCategoria.SelectedValue = articulo.Categoria.Id;
                 cbMarca.SelectedValue = articulo.Marca.Id;
-                tbUrl.Text = articulo.Imagenes[0].ImagenUrl;
-                cargarImagen(articulo.Imagenes[0].ImagenUrl);
+                if (articulo.Imagenes?.Count > 0)
+                {
+                    tbUrl.Text = articulo.Imagenes[0].ImagenUrl;
+                    cargarImagen(articulo.Imagenes[0].ImagenUrl);
+                }
             }
         }
 

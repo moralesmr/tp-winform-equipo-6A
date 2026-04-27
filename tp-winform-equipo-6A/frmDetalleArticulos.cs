@@ -91,5 +91,10 @@ namespace tp_winform_equipo_6A
                 cargarImagen();
             }
         }
+
+        private void pbImagen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

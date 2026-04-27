@@ -14,15 +14,27 @@ namespace negocio
     {
 
 
-        public void agregar(Articulo a)
+        public int agregar(Articulo a)
         {
             AccesoDatos datos = new AccesoDatos();
+            AccesoDatos datos2 = new AccesoDatos();
             try
             {
                 datos.setConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) values ('" + a.CodArticulo + "','" + a.Nombre + "', '" + a.Descripcion + "', @idMarca, @idCategoria," + a.Precio + ")");
                 datos.setearParametros("@IdMarca", a.Marca.Id);
                 datos.setearParametros("@IdCategoria", a.Categoria.Id);
                 datos.ejecutarAccion();
+
+                //obtenemos datos de Id recien creado
+                datos2.setConsulta("SELECT MAX(Id) FROM ARTICULOS");
+                datos2.ejecutarLectura();
+
+                int id = 0;
+
+                if (datos2.Lector.Read())
+                    id = (int)datos2.Lector[0];
+
+                return id;
             }
             catch (Exception ex)
             {
@@ -32,6 +44,7 @@ namespace negocio
             finally
             {
                 datos.cerrarConexion();
+                datos2.cerrarConexion();
             }
 
         }

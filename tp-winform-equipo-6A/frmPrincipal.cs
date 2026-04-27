@@ -21,6 +21,11 @@ namespace tp_winform_equipo_6A
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            cbBuscador.Items.Add("Nombre");
+            cbBuscador.Items.Add("Marca");
+            cbBuscador.Items.Add("Categoria");
+            cbBuscador.Items.Add("Codigo");
+            cbBuscador.Items.Add("Precio");
             cargarArticulos();
         }
 
@@ -158,7 +163,10 @@ namespace tp_winform_equipo_6A
         
         }
 
-        
+        private void cbBuscador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

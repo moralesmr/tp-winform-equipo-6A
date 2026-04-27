@@ -1,3 +1,4 @@
+
 ﻿using dominio;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace tp_winform_equipo_6A
 {
     public partial class frmDetalleArticulos : Form
     {
+
         private Articulo articulo;
 
         public frmDetalleArticulos(Articulo articuloSeleccionado)
@@ -47,5 +49,11 @@ namespace tp_winform_equipo_6A
         }
 
      
+
+        public frmDetalleArticulos()
+        {
+            InitializeComponent();
+        }
+
     }
 }

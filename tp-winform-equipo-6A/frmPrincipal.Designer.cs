@@ -55,7 +55,7 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(891, 245);
             this.dgvArticulos.TabIndex = 15;
-           //
+            // 
             // btnAgregarArticulo
             // 
             this.btnAgregarArticulo.Location = new System.Drawing.Point(36, 446);
@@ -201,4 +201,3 @@
         private System.Windows.Forms.Button btnBuscador;
     }
 }
-

@@ -55,5 +55,9 @@ namespace tp_winform_equipo_6A
             InitializeComponent();
         }
 
+        private void frmDetalleArticulos_Load(object sender, EventArgs e)
+        {
+            Estilos.BotonAzul(btnVolver);
+        }
     }
 }

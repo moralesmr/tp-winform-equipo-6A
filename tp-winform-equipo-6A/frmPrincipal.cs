@@ -21,6 +21,13 @@ namespace tp_winform_equipo_6A
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            //Se aplican estilos a los botones
+            Estilos.BotonAzul(btnAgregarArticulo);
+            Estilos.BotonAzul(btnModificarArticulo);
+            Estilos.BotonAzul(btnEliminarArticulo);
+            Estilos.BotonAzul(btnDetalleArticulo);
+            Estilos.BotonAzul(btnBuscador);
+
             cbBuscador.Items.Add("Nombre");
             cbBuscador.Items.Add("Marca");
             cbBuscador.Items.Add("Categoria");

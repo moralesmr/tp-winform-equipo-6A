@@ -50,22 +50,22 @@
             // 
             // btnCancelarArticulo
             // 
-            this.btnCancelarArticulo.Location = new System.Drawing.Point(341, 414);
+            this.btnCancelarArticulo.Location = new System.Drawing.Point(650, 353);
             this.btnCancelarArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarArticulo.Name = "btnCancelarArticulo";
             this.btnCancelarArticulo.Size = new System.Drawing.Size(115, 36);
-            this.btnCancelarArticulo.TabIndex = 31;
+            this.btnCancelarArticulo.TabIndex = 8;
             this.btnCancelarArticulo.Text = "Cancelar";
             this.btnCancelarArticulo.UseVisualStyleBackColor = true;
             this.btnCancelarArticulo.Click += new System.EventHandler(this.btnCancelarArticulo_Click);
             // 
             // btnGuardarArticulo
             // 
-            this.btnGuardarArticulo.Location = new System.Drawing.Point(221, 414);
+            this.btnGuardarArticulo.Location = new System.Drawing.Point(516, 353);
             this.btnGuardarArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardarArticulo.Name = "btnGuardarArticulo";
             this.btnGuardarArticulo.Size = new System.Drawing.Size(115, 36);
-            this.btnGuardarArticulo.TabIndex = 30;
+            this.btnGuardarArticulo.TabIndex = 7;
             this.btnGuardarArticulo.Text = "Guardar";
             this.btnGuardarArticulo.UseVisualStyleBackColor = true;
             this.btnGuardarArticulo.Click += new System.EventHandler(this.btnGuardarArticulo_Click);
@@ -77,7 +77,7 @@
             this.tbUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUrl.Name = "tbUrl";
             this.tbUrl.Size = new System.Drawing.Size(255, 22);
-            this.tbUrl.TabIndex = 29;
+            this.tbUrl.TabIndex = 6;
             this.tbUrl.TextChanged += new System.EventHandler(this.tbUrl_TextChanged);
             this.tbUrl.Leave += new System.EventHandler(this.tbUrl_Leave);
             // 
@@ -87,7 +87,7 @@
             this.tbPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(101, 22);
-            this.tbPrecio.TabIndex = 28;
+            this.tbPrecio.TabIndex = 5;
             // 
             // tbDescripcion
             // 
@@ -95,7 +95,7 @@
             this.tbDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(255, 22);
-            this.tbDescripcion.TabIndex = 27;
+            this.tbDescripcion.TabIndex = 2;
             // 
             // tbNombre
             // 
@@ -103,7 +103,7 @@
             this.tbNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(255, 22);
-            this.tbNombre.TabIndex = 26;
+            this.tbNombre.TabIndex = 1;
             // 
             // tbCodigo
             // 
@@ -111,7 +111,7 @@
             this.tbCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(255, 22);
-            this.tbCodigo.TabIndex = 25;
+            this.tbCodigo.TabIndex = 0;
             // 
             // cbCategoria
             // 
@@ -121,7 +121,7 @@
             this.cbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(185, 24);
-            this.cbCategoria.TabIndex = 24;
+            this.cbCategoria.TabIndex = 3;
             // 
             // cbMarca
             // 
@@ -131,7 +131,7 @@
             this.cbMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMarca.Name = "cbMarca";
             this.cbMarca.Size = new System.Drawing.Size(185, 24);
-            this.cbMarca.TabIndex = 23;
+            this.cbMarca.TabIndex = 4;
             // 
             // lblUrl
             // 
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 554);
+            this.ClientSize = new System.Drawing.Size(831, 417);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.btnCancelarArticulo);
             this.Controls.Add(this.btnGuardarArticulo);
@@ -227,8 +227,14 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(849, 464);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(849, 464);
             this.Name = "frmAgregarArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Articulos";
             this.Load += new System.EventHandler(this.frmAgregarArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();

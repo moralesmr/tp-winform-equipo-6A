@@ -28,6 +28,7 @@ namespace tp_winform_equipo_6A
             Estilos.BotonAzul(btnDetalleArticulo);
             Estilos.BotonAzul(btnBuscador);
 
+
             cbBuscador.Items.Add("Nombre");
             cbBuscador.Items.Add("Marca");
             cbBuscador.Items.Add("Categoria");

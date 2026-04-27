@@ -108,7 +108,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(204, 57);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(232, 22);
-            this.txtCodigo.TabIndex = 6;
+            this.txtCodigo.TabIndex = 0;
             // 
             // txtNombre
             // 
@@ -116,7 +116,7 @@
             this.txtNombre.Location = new System.Drawing.Point(204, 101);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(232, 22);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
@@ -124,7 +124,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(204, 157);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(232, 22);
-            this.txtDescripcion.TabIndex = 8;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtMarca
             // 
@@ -132,7 +132,7 @@
             this.txtMarca.Location = new System.Drawing.Point(204, 204);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(232, 22);
-            this.txtMarca.TabIndex = 9;
+            this.txtMarca.TabIndex = 3;
             // 
             // txtCategoria
             // 
@@ -140,7 +140,7 @@
             this.txtCategoria.Location = new System.Drawing.Point(204, 251);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(232, 22);
-            this.txtCategoria.TabIndex = 10;
+            this.txtCategoria.TabIndex = 4;
             // 
             // txtPrecio
             // 
@@ -148,44 +148,44 @@
             this.txtPrecio.Location = new System.Drawing.Point(204, 305);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(232, 22);
-            this.txtPrecio.TabIndex = 11;
+            this.txtPrecio.TabIndex = 5;
             // 
             // pbImagen
             // 
             this.pbImagen.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pbImagen.Location = new System.Drawing.Point(506, 38);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(246, 323);
+            this.pbImagen.Size = new System.Drawing.Size(246, 289);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 12;
             this.pbImagen.TabStop = false;
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(585, 404);
+            this.btnVolver.Location = new System.Drawing.Point(610, 427);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(142, 38);
-            this.btnVolver.TabIndex = 14;
+            this.btnVolver.TabIndex = 8;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(506, 367);
+            this.btnAnterior.Location = new System.Drawing.Point(506, 350);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(94, 31);
-            this.btnAnterior.TabIndex = 15;
+            this.btnAnterior.TabIndex = 6;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(658, 367);
+            this.btnSiguiente.Location = new System.Drawing.Point(658, 350);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(94, 31);
-            this.btnSiguiente.TabIndex = 16;
+            this.btnSiguiente.TabIndex = 7;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 484);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnVolver);
@@ -211,7 +211,13 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(818, 531);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(818, 531);
             this.Name = "frmDetalleArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDetalleArticulos";
             this.Load += new System.EventHandler(this.frmDetalleArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();

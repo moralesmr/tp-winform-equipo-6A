@@ -73,7 +73,7 @@
             // tbUrl
             // 
             this.tbUrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbUrl.Location = new System.Drawing.Point(188, 288);
+            this.tbUrl.Location = new System.Drawing.Point(188, 286);
             this.tbUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUrl.Name = "tbUrl";
             this.tbUrl.Size = new System.Drawing.Size(255, 22);
@@ -83,7 +83,7 @@
             // 
             // tbPrecio
             // 
-            this.tbPrecio.Location = new System.Drawing.Point(188, 254);
+            this.tbPrecio.Location = new System.Drawing.Point(188, 251);
             this.tbPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPrecio.Name = "tbPrecio";
             this.tbPrecio.Size = new System.Drawing.Size(101, 22);
@@ -91,7 +91,7 @@
             // 
             // tbDescripcion
             // 
-            this.tbDescripcion.Location = new System.Drawing.Point(188, 146);
+            this.tbDescripcion.Location = new System.Drawing.Point(188, 153);
             this.tbDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(255, 22);
@@ -99,7 +99,7 @@
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(188, 119);
+            this.tbNombre.Location = new System.Drawing.Point(188, 117);
             this.tbNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(255, 22);
@@ -107,7 +107,7 @@
             // 
             // tbCodigo
             // 
-            this.tbCodigo.Location = new System.Drawing.Point(188, 78);
+            this.tbCodigo.Location = new System.Drawing.Point(188, 81);
             this.tbCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(255, 22);
@@ -117,10 +117,10 @@
             // 
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(188, 188);
+            this.cbCategoria.Location = new System.Drawing.Point(188, 185);
             this.cbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(185, 24);
+            this.cbCategoria.Size = new System.Drawing.Size(255, 24);
             this.cbCategoria.TabIndex = 3;
             // 
             // cbMarca
@@ -130,13 +130,13 @@
             this.cbMarca.Location = new System.Drawing.Point(188, 218);
             this.cbMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(185, 24);
+            this.cbMarca.Size = new System.Drawing.Size(255, 24);
             this.cbMarca.TabIndex = 4;
             // 
             // lblUrl
             // 
             this.lblUrl.AutoSize = true;
-            this.lblUrl.Location = new System.Drawing.Point(64, 294);
+            this.lblUrl.Location = new System.Drawing.Point(65, 288);
             this.lblUrl.Name = "lblUrl";
             this.lblUrl.Size = new System.Drawing.Size(85, 16);
             this.lblUrl.TabIndex = 22;
@@ -190,7 +190,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(64, 84);
+            this.lblCodigo.Location = new System.Drawing.Point(65, 87);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(54, 16);
             this.lblCodigo.TabIndex = 16;
@@ -228,7 +228,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(849, 464);
             this.MinimizeBox = false;

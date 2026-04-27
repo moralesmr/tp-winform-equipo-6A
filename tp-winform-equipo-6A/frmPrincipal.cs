@@ -58,7 +58,6 @@ namespace tp_winform_equipo_6A
             {
                 dgvArticulos.DataSource = articuloNegocio.listarArticulos();
                 dgvArticulos.Columns["Id"].Visible = false;
-
             }
             catch (Exception ex)
             {

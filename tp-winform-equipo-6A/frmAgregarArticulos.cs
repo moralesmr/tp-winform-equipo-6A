@@ -90,8 +90,7 @@ namespace tp_winform_equipo_6A
                 tbPrecio.Text = articulo.Precio.ToString();
                 cbCategoria.SelectedValue = articulo.Categoria.Id;
                 cbMarca.SelectedValue = articulo.Marca.Id;
-                // tbtUrlImagen.Text = articulo.UrlImagen;
-                //cargarImagen(articulo.UrlImagen);
+                tbUrl.Text = articulo.Imagenes[0].ImagenUrl;
             }
         }
 

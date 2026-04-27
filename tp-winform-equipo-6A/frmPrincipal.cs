@@ -41,8 +41,16 @@ namespace tp_winform_equipo_6A
         {
             //Conexion BBDD
             ArticuloNegocio articuloNegocio = new negocio.ArticuloNegocio();
-            dgvArticulos.DataSource = articuloNegocio.listarArticulos();
-            dgvArticulos.Columns["Id"].Visible = false;
+            try
+            {
+                dgvArticulos.DataSource = articuloNegocio.listarArticulos();
+                dgvArticulos.Columns["Id"].Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar datos: " + ex.ToString());
+            }
         }
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)

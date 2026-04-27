@@ -1,9 +1,11 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace negocio
 {
@@ -12,6 +14,7 @@ namespace negocio
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
+       
         public SqlDataReader Lector
         {
             get { return lector; }
@@ -40,6 +43,10 @@ namespace negocio
             {
                 conexion.Open();
                 lector = comando.ExecuteReader();
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Error de conexión con la base de datos. Verifique el servidor.", ex);
             }
             catch (Exception ex)
             {
@@ -79,7 +86,14 @@ namespace negocio
             if (lector != null)
                 lector.Close();
             conexion.Close();
+
+            if (conexion != null && conexion.State == System.Data.ConnectionState.Open)
+                conexion.Close();
         }
+
+       
+
+
 
 
     }

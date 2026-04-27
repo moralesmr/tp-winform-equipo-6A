@@ -17,14 +17,16 @@ namespace tp_winform_equipo_6A
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frmAdmCategorias_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void frmAdmCategorias_Load(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+           
+                this.Close();
+            
         }
     }
 }

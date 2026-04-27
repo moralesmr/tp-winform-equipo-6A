@@ -40,7 +40,7 @@
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // listBoxCat
             // 

@@ -167,6 +167,18 @@ namespace tp_winform_equipo_6A
         {
 
         }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            frmAdmMarcas ventanaMarcas = new frmAdmMarcas();
+            ventanaMarcas.ShowDialog();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmAdmCategorias ventanaCategorias = new frmAdmCategorias();
+            ventanaCategorias.ShowDialog();
+        }
     }
     
 }

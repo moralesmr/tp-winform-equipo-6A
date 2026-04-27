@@ -33,8 +33,8 @@
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnDetalleArticulo = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnMarcas = new System.Windows.Forms.Button();
+            this.btnCategorias = new System.Windows.Forms.Button();
             this.lblBuscador = new System.Windows.Forms.Label();
             this.cbBuscador = new System.Windows.Forms.ComboBox();
             this.tbBuscador = new System.Windows.Forms.TextBox();
@@ -102,25 +102,27 @@
             this.btnDetalleArticulo.UseVisualStyleBackColor = true;
             this.btnDetalleArticulo.Click += new System.EventHandler(this.btnDetalleArticulo_Click);
             // 
-            // button5
+            // btnMarcas
             // 
-            this.button5.Location = new System.Drawing.Point(506, 362);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 29);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Marcas";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMarcas.Location = new System.Drawing.Point(506, 362);
+            this.btnMarcas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMarcas.Name = "btnMarcas";
+            this.btnMarcas.Size = new System.Drawing.Size(86, 29);
+            this.btnMarcas.TabIndex = 20;
+            this.btnMarcas.Text = "Marcas";
+            this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
-            // button6
+            // btnCategorias
             // 
-            this.button6.Location = new System.Drawing.Point(608, 362);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 29);
-            this.button6.TabIndex = 21;
-            this.button6.Text = "Categorias";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCategorias.Location = new System.Drawing.Point(608, 362);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(86, 29);
+            this.btnCategorias.TabIndex = 21;
+            this.btnCategorias.Text = "Categorias";
+            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // lblBuscador
             // 
@@ -171,8 +173,8 @@
             this.Controls.Add(this.tbBuscador);
             this.Controls.Add(this.cbBuscador);
             this.Controls.Add(this.lblBuscador);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnCategorias);
+            this.Controls.Add(this.btnMarcas);
             this.Controls.Add(this.btnDetalleArticulo);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
@@ -194,8 +196,8 @@
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnDetalleArticulo;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnMarcas;
+        private System.Windows.Forms.Button btnCategorias;
         private System.Windows.Forms.Label lblBuscador;
         private System.Windows.Forms.ComboBox cbBuscador;
         private System.Windows.Forms.TextBox tbBuscador;

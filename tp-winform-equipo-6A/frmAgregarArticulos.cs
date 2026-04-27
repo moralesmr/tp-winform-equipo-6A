@@ -98,5 +98,30 @@ namespace tp_winform_equipo_6A
         {
             Close();
         }
+
+        private void tbUrl_Leave(object sender, EventArgs e)
+        {
+            
+        cargarImagen(tbUrl.Text);
+
+        }
+
+        private void tbUrl_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+                try
+                {
+                    pbImagen.Load(imagen);
+                }
+                catch(Exception ex)
+                {
+                    pbImagen.Load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcCBHgbS23kyBw2r8Pquu19UtKZnrZmFUx1g&s");
+                }
+            
+        }
     }
 }

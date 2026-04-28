@@ -23,7 +23,7 @@ namespace tp_winform_equipo_6A
 
         private void frmAdmCategorias_Load(object sender, EventArgs e)
         {
-            cargar();            
+            cargar();
         }
 
           private void cargar()
@@ -33,9 +33,10 @@ namespace tp_winform_equipo_6A
                   CategoriaNegocio negocio = new CategoriaNegocio();
                   listaCategorias = negocio.listar();
         
-                  listBoxCat.DataSource = null;
-                  listBoxCat.DataSource = listaCategorias;
-              }
+                  dgvCategorias.DataSource = null;
+                  dgvCategorias.DataSource = listaCategorias;
+                  dgvCategorias.Columns["Id"].Visible = false;
+            }
               catch (Exception ex)
               {
                   MessageBox.Show("error en la carga: " + ex.Message);
@@ -52,6 +53,28 @@ namespace tp_winform_equipo_6A
             frmAgregarCategorias ventanaAgregarCategorias = new frmAgregarCategorias();
             ventanaAgregarCategorias.ShowDialog();
             cargar();
+        }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            Categoria categoriaSeleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Desea eliminar la categoria?", "Eliminando", MessageBoxButtons.YesNo);
+                if (respuesta == DialogResult.Yes)
+                {
+                    categoriaSeleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    categoriaNegocio.eliminar(categoriaSeleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

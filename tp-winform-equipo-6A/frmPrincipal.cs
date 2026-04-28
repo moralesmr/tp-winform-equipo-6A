@@ -37,11 +37,6 @@ namespace tp_winform_equipo_6A
             cargarArticulos();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregarArticulo_Click(object sender, EventArgs e)
         {
             frmAgregarArticulos ventanaAgregarArticulo = new frmAgregarArticulos();

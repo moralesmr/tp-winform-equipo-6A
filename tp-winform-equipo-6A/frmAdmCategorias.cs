@@ -44,9 +44,14 @@ namespace tp_winform_equipo_6A
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-           
-                this.Close();
-            
+            Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategorias ventanaAgregarCategorias = new frmAgregarCategorias();
+            ventanaAgregarCategorias.ShowDialog();
+            cargar();
         }
     }
 }

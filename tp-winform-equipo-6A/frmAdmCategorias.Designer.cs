@@ -28,36 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.listBoxCat = new System.Windows.Forms.ListBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Location = new System.Drawing.Point(558, 404);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // listBoxCat
             // 
             this.listBoxCat.FormattingEnabled = true;
-            this.listBoxCat.Location = new System.Drawing.Point(52, 30);
+            this.listBoxCat.ItemHeight = 16;
+            this.listBoxCat.Location = new System.Drawing.Point(69, 37);
+            this.listBoxCat.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxCat.Name = "listBoxCat";
-            this.listBoxCat.Size = new System.Drawing.Size(430, 342);
+            this.listBoxCat.Size = new System.Drawing.Size(666, 228);
             this.listBoxCat.TabIndex = 1;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(620, 334);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(115, 36);
+            this.btnCerrar.TabIndex = 8;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(349, 334);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(115, 36);
+            this.btnAgregar.TabIndex = 9;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnEliminarArticulo
+            // 
+            this.btnEliminarArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(485, 334);
+            this.btnEliminarArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(115, 36);
+            this.btnEliminarArticulo.TabIndex = 10;
+            this.btnEliminarArticulo.Text = "Eliminar";
+            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             // 
             // frmAdmCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBoxCat);
+            this.ClientSize = new System.Drawing.Size(831, 417);
+            this.Controls.Add(this.btnEliminarArticulo);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.listBoxCat);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(849, 464);
+            this.MinimumSize = new System.Drawing.Size(849, 464);
             this.Name = "frmAdmCategorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Categorias";
             this.Load += new System.EventHandler(this.frmAdmCategorias_Load);
             this.ResumeLayout(false);
@@ -65,8 +99,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.ListBox listBoxCat;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEliminarArticulo;
     }
 }

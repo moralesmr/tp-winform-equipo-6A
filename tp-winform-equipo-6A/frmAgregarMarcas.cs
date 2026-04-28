@@ -6,29 +6,28 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace tp_winform_equipo_6A
 {
-    public partial class frmAgregarCategorias : Form
+    public partial class frmAgregarMarcas : Form
     {
-        public frmAgregarCategorias()
+        public frmAgregarMarcas()
         {
             InitializeComponent();
         }
 
-        private void btnGuardarCategoria_Click(object sender, EventArgs e)
+        private void btnGuardarMarca_Click(object sender, EventArgs e)
         {
-            Categoria aux = new Categoria();
-            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            Marca aux = new Marca();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
             try
             {
                 aux.Descripcion = tbDescripcion.Text;
-                categoriaNegocio.agregar(aux);
-                MessageBox.Show("Categoria agregado correctamente");
+                marcaNegocio.Agregar(aux);
+                MessageBox.Show("Marca agregada correctamente");
 
                 Close();
             }
@@ -37,6 +36,5 @@ namespace tp_winform_equipo_6A
                 MessageBox.Show(ex.ToString());
             }
         }
-
     }
 }

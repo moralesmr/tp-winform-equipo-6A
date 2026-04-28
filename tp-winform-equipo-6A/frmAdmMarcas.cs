@@ -43,14 +43,11 @@ namespace tp_winform_equipo_6A
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            
+            frmAgregarMarcas ventanaAgregarMarcas = new frmAgregarMarcas();
+            ventanaAgregarMarcas.ShowDialog();
+            cargar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -72,10 +69,7 @@ namespace tp_winform_equipo_6A
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionada = (Marca)listBoxMarca.SelectedItem;
-
-
                     negocio.Eliminar(seleccionada.Id);
-
                     cargar();
                 }
             }
@@ -86,9 +80,10 @@ namespace tp_winform_equipo_6A
 
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+
+        private void btnCerrar_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

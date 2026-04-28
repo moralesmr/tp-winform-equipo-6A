@@ -28,19 +28,18 @@ namespace tp_winform_equipo_6A
 
           private void cargar()
           {
-              try
-              {
-                  CategoriaNegocio negocio = new CategoriaNegocio();
-                  listaCategorias = negocio.listar();
-        
-                  dgvCategorias.DataSource = null;
-                  dgvCategorias.DataSource = listaCategorias;
-                  dgvCategorias.Columns["Id"].Visible = false;
+            try
+            {
+                CategoriaNegocio negocio = new CategoriaNegocio();
+                listaCategorias = negocio.listar();
+
+                listBoxCategoria.DataSource = null;
+                listBoxCategoria.DataSource = listaCategorias;
             }
-              catch (Exception ex)
-              {
-                  MessageBox.Show("error en la carga: " + ex.Message);
-              }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error en la carga: " + ex.Message);
+            }
           }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -57,23 +56,30 @@ namespace tp_winform_equipo_6A
 
         private void btnEliminarCategoria_Click(object sender, EventArgs e)
         {
-            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-            Categoria categoriaSeleccionado;
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            Categoria seleccionada;
 
             try
             {
-                DialogResult respuesta = MessageBox.Show("Desea eliminar la categoria?", "Eliminando", MessageBoxButtons.YesNo);
+
+                if (listBoxCategoria.SelectedItem == null)
+                {
+                    MessageBox.Show("Por favor, seleccione una marca de la lista para eliminar.");
+                    return;
+                }
+
+                DialogResult respuesta = MessageBox.Show("¿De verdad desea eliminar esta cateogoria?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
                 if (respuesta == DialogResult.Yes)
                 {
-                    categoriaSeleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
-                    categoriaNegocio.eliminar(categoriaSeleccionado.Id);
+                    seleccionada = (Categoria)listBoxCategoria.SelectedItem;
+                    negocio.eliminar(seleccionada.Id);
                     cargar();
                 }
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                MessageBox.Show("No se pudo eliminar la categoria. Es posible que esté vinculada a un artículo existente. \nDetalle: " + ex.Message, "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
